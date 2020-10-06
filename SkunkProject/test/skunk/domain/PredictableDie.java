@@ -13,6 +13,10 @@ public class PredictableDie
 
 	public PredictableDie(int[] is)
 	{
+		if (is.length == 0)
+		{
+			throw new RuntimeException();
+		}
 		this.theRolls = is;
 		this.nextInt = 0;
 	}

@@ -21,6 +21,7 @@ class TestPredictableDie
 		die.roll();
 		assertEquals(1,die.getLastRoll());
 	}
+	
 	@Test
 	void test_PD_1_more_than_once()
 	{
@@ -30,6 +31,13 @@ class TestPredictableDie
 		die.roll();
 		assertEquals(1,die.getLastRoll());
 
+	}
+
+	@Test
+	void test_PD_with_empty_initial_int_array()
+	{
+		PredictableDie die = new PredictableDie(new int[] {});
+		die.roll();
 	}
 
 }

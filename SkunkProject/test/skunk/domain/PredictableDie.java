@@ -2,6 +2,10 @@ package skunk.domain;
 
 public class PredictableDie
 {
+	private int[] theRolls;
+	private int nextInt;
+	private int lastRoll;
+	
 	public PredictableDie()
 	{
 
@@ -9,18 +13,19 @@ public class PredictableDie
 
 	public PredictableDie(int[] is)
 	{
-		// TODO Auto-generated constructor stub
+		this.theRolls = is;
+		this.nextInt = 0 ;
 	}
 
 	public void roll()
 	{
-		// TODO Auto-generated method stub
+		this.lastRoll = theRolls[this.nextInt];
 		
 	}
 
 	public int getLastRoll()
 	{
 		
-		return 0;
+		return this.lastRoll;
 	}
 }

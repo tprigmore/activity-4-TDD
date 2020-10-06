@@ -20,13 +20,10 @@ public class PredictableDie
 	public void roll()
 	{
 		this.lastRoll = theRolls[this.nextInt];
-		if (this.nextInt == 2)
+		this.nextInt++;
+		if (this.nextInt == this.theRolls.length)
 		{
 			this.nextInt = 0;
-		}
-		else
-		{
-			this.nextInt++;
 		}
 
 	}

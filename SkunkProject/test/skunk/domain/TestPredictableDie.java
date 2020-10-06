@@ -21,5 +21,15 @@ class TestPredictableDie
 		die.roll();
 		assertEquals(1,die.getLastRoll());
 	}
+	@Test
+	void test_PD_1_more_than_once()
+	{
+		PredictableDie die = new PredictableDie(new int[] {1});
+		die.roll();
+		assertEquals(1,die.getLastRoll());
+		die.roll();
+		assertEquals(1,die.getLastRoll());
+
+	}
 
 }
